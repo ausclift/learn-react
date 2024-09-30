@@ -2,7 +2,7 @@ import { ItemProps } from "@/types/item";
 
 function Item({ name, isPacked } : ItemProps) {
   return (
-    <li className="item">
+    <li className="item" style={{ textDecoration: isPacked ? 'line-through' : 'none' }}>
       {name}
     </li>
   );

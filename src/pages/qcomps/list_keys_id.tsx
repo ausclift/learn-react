@@ -17,7 +17,10 @@ function getImageUrl(imageId: string) {
 }
 export default function List() {
   const listItems = people.map(person =>
-    <li>
+    <li key={person.id}>
+      <a href={getImageUrl(person.imageId)} target="_blank" rel="noopener noreferrer">
+        {person.name}
+      </a>
     </li>
   );
   return <ul>{listItems}</ul>;
